@@ -12,11 +12,9 @@ threshold = 1
 
 client = commands.Bot(intents=intents, command_prefix="!")
 
-DISCORD_TOKEN = "MTI1MzM1MDIxOTY2ODc4MzE1Ng.GjC5Do.m1XxlwdAKbMxuDBSAv2sN1HdoE26kWBvOu5uHA"
+DISCORD_TOKEN = "[Discord Token]"
 FFMPEG_PATH = 'ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe'
 
-##command for terminal if not in variables
-##setx OPENAI_API_KEY "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"
 
 aiClient = OpenAI()
 
