@@ -215,7 +215,24 @@ async def on_message(message):
                 del Speaker[message.guild.id]
                 await message.channel.send('Disconnected from the voice channel.')
             else:
-                await message.channel.send('I am not in a voice channel.')
+                await message.channel.send('I am not connected to a voice channel. DO NOT kick the bot from vc in the future. use !leave')
+                try:
+                    del voice_clients[message.guild.id]
+                except:
+                    print("failed to delete voice client")
+                try:
+                    del channels[message.guild.id]
+                except:
+                    print("failed to delete channel")
+                try:
+                    del botenabled[message.guild.id]
+                except:
+                    print("failed to delete botenabled")
+                try:
+                    del Speaker[message.guild.id]
+                except:
+                    print("failed to delete speaker")
+                await message.channel.send('Disconnected from the voice channel.')
         else:
             await message.channel.send('I am not in a voice channel.')
 
