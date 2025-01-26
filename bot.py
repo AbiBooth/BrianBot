@@ -322,7 +322,7 @@ async def on_message(message):
                     else:
                         await message.channel.send("Failed to generate tts")
                 else:
-                    await message.channel.send('I am not connected to a voice channel. Use `!join` to invite me to your voice channel.')
+                    await message.channel.send('I am not connected to a voice channel. Use `!join` to invite me to your voice channel. (this could be an error please try !leave if so)')
              
     
 
